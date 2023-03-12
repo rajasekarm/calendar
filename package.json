@@ -26,6 +26,6 @@
     "url": "git+https://github.com/rajasekarm/calendar.git"
   },
   "publishConfig": {
-    "@rajasekarm:registry": "https://npm.pkg.github.com"
+    "access": "public"
   }
 }
