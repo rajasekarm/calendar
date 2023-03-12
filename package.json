@@ -21,7 +21,11 @@
   "dependencies": {
     "dayjs": "^1.11.7"
   },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rajasekarm/calendar.git"
+  },
   "publishConfig": {
-    "access": "public"
+    "@rajasekarm:registry": "https://npm.pkg.github.com"
   }
 }
