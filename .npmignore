@@ -5,3 +5,4 @@ test
 pnpm-lock.yaml
 .prettierignore
 .prettierrc.json
+.nvmrc
