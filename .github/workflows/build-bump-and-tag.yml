@@ -1,4 +1,4 @@
-name: Build bump tag
+name: Build version
 
 on:
   push:
@@ -16,21 +16,20 @@ jobs:
   #     - run: npm i -g husky
   #     - run: npm ci
   #     - run: npm test
-  tag-and-bump:
-    if: "!startsWith(github.event.head_commit.message, 'bump:')"
-    # needs: install-and-test
-    runs-on: ubuntu-latest
-    name: 'Bump version and create changelog with commitizen'
-    steps:
-      - name: Check out
-        uses: actions/checkout@v2
-        with:
-          fetch-depth: 0
-          token: '${{ secrets.GH_TOKEN }}'
-      - id: cz
-        name: Bump package
-        uses: commitizen-tools/commitizen-action@master
-        with:
-          github_token: ${{ secrets.GH_TOKEN }}
-      - name: Print Version
-        run: echo "Bumped to version ${{ steps.cz.outputs.version }}"
+  bump_version:
+  # needs: install-and-test
+  runs-on: ubuntu-latest
+  name: 'Bump version and create changelog with commitizen'
+  steps:
+    - name: Check out
+      uses: actions/checkout@v2
+      with:
+        fetch-depth: 0
+        token: '${{ secrets.GH_TOKEN }}'
+    - id: cz
+      name: Bump package
+      uses: commitizen-tools/commitizen-action@master
+      with:
+        github_token: ${{ secrets.GH_TOKEN }}
+    - name: Print Version
+      run: echo "Bumped to version ${{ steps.cz.outputs.version }}"
