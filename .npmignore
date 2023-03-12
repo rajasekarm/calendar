@@ -1,3 +1,7 @@
-test
 src
+test
 .vscode 
+.github
+pnpm-lock.yaml
+.prettierignore
+.prettierrc.json
