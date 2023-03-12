@@ -4,5 +4,4 @@ test
 .github
 pnpm-lock.yaml
 .prettierignore
-rollup.config.js
 .prettierrc.json
