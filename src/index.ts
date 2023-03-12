@@ -1,1 +1,1 @@
-export {nseDateFormat} from './nse-date-format';
+export { nseDateFormat } from './nse-date-format'; 
